@@ -1,0 +1,34 @@
+nav[id="toc"] {
+  top: 42px;
+}
+
+/* small screens */
+@media (max-width: 768px) {
+  /* override stickyness so that the navigation does not follow scrolling */
+  nav[id="toc"] {
+    margin-bottom: 42px;
+    position: static;
+  }
+
+  nav[id="toc"] .nav .active .nav {
+    display: none;
+  }
+}
+
+.question {
+    padding: 20px;
+    padding-bottom: 0px;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.faq-section {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+h3 {
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+}
+
