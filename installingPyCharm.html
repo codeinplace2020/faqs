@@ -1,0 +1,580 @@
+
+<head>
+
+<title>CS106A</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="//web.stanford.edu/class/cs106a/css/style.css">
+
+<!-- Java Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="//web.stanford.edu/class/cs106a/plugins/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Python highlighting -->
+<script src="//web.stanford.edu/class/cs106a/plugins/prism/prism.js"></script>
+<link href="//web.stanford.edu/class/cs106a/plugins/prism/prism.css" rel="stylesheet" />
+
+<!-- Probability Packages -->
+<script src="//web.stanford.edu/class/cs106a/plugins/probability/gaussian.js"></script>
+<script src="//web.stanford.edu/class/cs106a/plugins/color.js"></script>
+
+<!-- font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<!-- SWAL -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+<!-- Math Jax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+<script src="//web.stanford.edu/class/cs106a/plugins/math.min.js"></script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+    <!-- add after bootstrap.min.css -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css" />
+    <!-- add after bootstrap.min.js -->
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+
+
+    <div class="container">
+
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div style="height:20px;"></div>
+                <h1>
+                    Installing PyCharm
+                </h1>
+                <p class="subtleHeading">
+                    April 13th, 2020
+                </p>
+                <hr />
+
+                <div class="alert alert-warning">
+                    <p id="osspiel"></p>
+                </div> 
+
+                <div class="alert alert-info">
+                    <p>
+                        <b>Running into issues?</b> Post on
+                        <a href="https://us.edstem.org/join/9H2UXg">ed</a>. Please make your post visible to all so that other students can learn from the answer.
+                    </p>
+                </div>
+
+                <p>
+                    In Code in Place, you will be writing your code on your
+                    computer using an application called
+                    <a href="https://www.jetbrains.com/pycharm/"> PyCharm</a>. PyCharm is
+                    what is known as an IDE, or <i>Integrated Development Environment</i>,
+                    which means that it allows us to edit our code, browse our files, run
+                    our programs and debug them, all in the same place. It's one of the
+                    most popular Python IDEs in the world, and used extremely commonly in
+                    industry. This handout is intended to take you through installing
+                    PyCharm on your own computer.
+                </p>
+
+                <h2>Installing Python</h2>
+                <p>
+                    In order to be able to run Python programs on your computer, you need
+                    to install a <i>Python Interpreter.</i> An interpreter is a program
+                    that is capable of reading a <code>.py</code> file that you have
+                    written, and translating the Python code in that file to instructions
+                    that your computer can easily execute. Begin by downloading Python:
+                </p>
+                <ul>
+                    <li class="maconly">
+                        <a href="https://www.python.org/ftp/python/3.8.1/python-3.8.1-macosx10.9.pkg">
+                            Mac Installer
+                        </a>
+                    </li>
+                    <li class="winonly">
+                        <a href="https://www.python.org/ftp/python/3.8.1/python-3.8.1-amd64.exe">
+                            Windows 64-bit installer
+                        </a>
+                        (If you're using a relatively new Windows computer, download this
+                        file)
+                    </li>
+                    <li class="winonly">
+                        <a href="https://www.python.org/ftp/python/3.8.1/python-3.8.1.exe">
+                            Windows 32-bit installer
+                        </a>
+                        (If you're using an older Windows computer, download this file)
+                    </li>
+                </ul>
+                <h3 class="maconly" data-toc-skip>Installing Python on a Mac</h3>
+                <p class="note maconly">
+                    Macs come with a version of Python installed, but this
+                    is an older version of Python. CS 106A
+                    requires the use of the newest version of Python, so make sure to follow these
+                    instructions even if you think you already have Python installed. 
+                    To install Python, simply open the downloaded installer file 
+                    and follow the default instructions.
+                </p>
+                <h3 class="winonly" data-toc-skip>Installing Python on Windows</h3>
+                <p class="winonly">
+                    Open the downloaded file. Before installing, there should be an
+                    option that says "Add Python 3.8 in PATH".
+                    <b>Make sure to check this box.</b> Then, continue installing
+                    normally.
+                </p>
+
+                <hr />
+
+                <h2> Installing and Testing PyCharm </h2>
+
+                <h3> Installation </h3>
+
+                <p>
+                    To get started, download and install the community version of PyCharm:
+                </p>
+                <ul>
+                    <li class="maconly">
+                        <a href="https://download.jetbrains.com/python/pycharm-community-2019.3.4.dmg">
+                            Mac Download
+                        </a>
+                        (Open the downloaded <code>.dmg</code> file and drag PyCharm into
+                        your Applications folder)
+                    </li> <!-- TODO old mac download -->
+                    <li class="winonly">
+                        <a href="https://download.jetbrains.com/python/pycharm-community-2019.3.4.exe">
+                            Windows Download
+                        </a>
+                        (Open the downloaded <code>.exe</code> file and install PyCharm,
+                        using all the default options.)
+                    </li>
+                </ul>
+
+                <p>
+                    At the end of the PyCharm installation process, you will be taken to a 
+                    welcome screen that looks like this:
+                </p>
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <img 
+                            src="//web.stanford.edu/class/cs106a/img/handouts/installingpycharm/macos/welcomescreen.png" 
+                            class="img-fluid mx-auto d-block" 
+                            alt="PyCharm Welcome Screen"
+                        />
+                    </div>
+                </div>
+                <br />
+
+                <p id="configure_interpreter">Click 'Configure' and then open PyCharm's settings, like so: </p>
+
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <img 
+                            src="//web.stanford.edu/class/cs106a/img/handouts/installingpycharm/macos/welcomescreen-config.png"
+                            class="img-fluid mx-auto d-block" 
+                            alt="PyCharm Welcome Screen, with 'Configure->Preferences' highlighted"
+                        />
+                    </div>
+                </div>
+                <br />
+
+                <p id="setinterpreter">
+                    In the Preferences window, click 'Project Interpreter', open the dropdown menu, and click 
+                    'Show All':
+                </p>
+
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <img 
+                            src="//web.stanford.edu/class/cs106a/img/handouts/installingpycharm/macos/preferences-showinterpreters.png"
+                            class="img-fluid mx-auto d-block" 
+                            alt="PyCharm Preferences Window, in the 'Project Interpreter' Pane, with 'Show All' highlighted in the dropdown menu" />
+                    </div>
+                </div>
+                <br />
+
+                <p>
+                    In the following Window, click the plus icon in the bottom left corner:
+                </p>
+
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <img src="//web.stanford.edu/class/cs106a/img/handouts/installingpycharm/macos/addnewinterpreter.png"
+                            class="img-fluid mx-auto d-block"
+                            alt="PyCharm Interpreter List, with the plus button in the bottom left highlighted" />
+                    </div>
+                </div>
+                <br />
+
+                <p>
+                    Click 'System Interpreter' in the sidebar. Depending on whether you've installed other versions of Python 
+                    before, Python 3.8 may already be selected in the dropdown menu. If not, select Python 3.8 and then click 'OK' 
+                    and 'OK' again:
+                </p>
+
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <img src="//web.stanford.edu/class/cs106a/img/handouts/installingpycharm/macos/addsysteminterpreter.png"
+                            class="img-fluid mx-auto d-block"
+                            alt="Adding the system interpreter in PyCharm" />
+                    </div>
+                </div>
+                <br />
+
+                <p>
+                    You should now be on a window that looks like this (although the contents of your list might look different):
+                </p>
+
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <img src="//web.stanford.edu/class/cs106a/img/handouts/installingpycharm/macos/interpreterafterselection.png"
+                            class="img-fluid mx-auto d-block"
+                            alt="Interpreter window after selecting system interpreter" />
+                    </div>
+                </div>
+                <br />
+
+                <p>
+                    Click 'OK' again to be taken back to the welcome page. You're now ready to test PyCharm!
+                </p>
+
+                <hr />
+
+                <h3> Testing PyCharm </h3>
+
+                <p>
+                    PyCharm models a program as a 'project', which consists of one or more
+                    Python files, as well as any additional resources like images or text
+                    files. To get you familiar with working with and running progams in PyCharm,
+                    we've provided a sample project, which you can download
+                    <a href="//web.stanford.edu/class/cs106a/handouts/pycharm_intro.zip">
+                        here</a>. To test out this project, and to gain familiarity with the PyCharm
+                    environment, download the sample project <span style="display: inline-block;" class="winonly">(on Windows, you'll 
+                    need to manually unzip it by opening it in Windows Explorer and selecting 'Extract All')</span> 
+                    and open it in PyCharm (using
+                    the 'open' option on the first screen). <b>Whenever you open projects in PyCharm,
+                    open the folder directly <i>containing the files you want to edit</i> as opposed to just 
+                    the files themselves.</b> Upon 
+                    opening the project, you should be greeted by a window that looks like this:
+                </p>
+
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <img src="//web.stanford.edu/class/cs106a/img/handouts/installingpycharm/macos/pycharmblank.png"
+                            class="img-fluid mx-auto d-block" alt="Blank PyCharm Window" />
+                    </div>
+                </div>
+                <br />
+
+                <p>
+                    Click 'Project' in the top left or use the <code><span id="modifier">Command</span> + 1</code> shortcut
+                    to open the file explorer, and open <code>intro.py</code> to pull up the editor: 
+                </p>
+
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <img src="//web.stanford.edu/class/cs106a/img/handouts/installingpycharm/macos/pycharmeditor.png" class="img-fluid mx-auto d-block"
+                            alt="PyCharm Editor" />
+                    </div>
+                </div>
+                <br />
+
+                <p>
+                    You aren't required to read or understand this code (although you will be able to by the end of the quarter!)
+                    but note that this editor is where you'll be writing all your code this quarter. Now, to run your program, click 
+                    'Terminal' in the bottom left corner, which will pull up a new terminal pane in your PyCharm window:
+                </p>
+
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <img src="//web.stanford.edu/class/cs106a/img/handouts/installingpycharm/macos/pycharmterminal.png" class="img-fluid mx-auto d-block"
+                            alt="PyCharm Terminal" />
+                    </div>
+                </div>
+                <br />
+                
+                <p>
+                    We'll talk more about the terminal later in the quarter, but for now, know that 
+                    the terminal is how you'll be running your Python programs throughout the quarter. 
+                    To run your first Python program, type this into the terminal and press enter:
+                </p>
+
+                <div class="text-center">
+                    <code><span class="launcher">python3</span> intro.py</code>
+                </div>
+                <br />
+
+                <p>
+                    You should see output that looks like this:
+                </p>
+
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <img src="//web.stanford.edu/class/cs106a/img/handouts/installingpycharm/macos/firstrun.png"
+                            class="img-fluid mx-auto d-block" alt="First run output" />
+                    </div>
+                </div>
+                <br />
+
+                <p>
+                    Now, type the following command into the terminal:
+                </p>
+
+                <div class="text-center">
+                    <code><span class="launcher">python3</span> intro.py &lt; YOUR NAME HERE &gt; </code>
+                </div>
+                <br />
+
+                <p>
+                    For example, if your name is Brahm, you'd type <code><span class="launcher">python3</span> intro.py Brahm</code>. You
+                    can type your full name if you'd prefer. You should now see output like this:
+                </p>
+
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <img src="//web.stanford.edu/class/cs106a/img/handouts/installingpycharm/macos/secondrun.png" class="img-fluid mx-auto d-block"
+                            alt="Second run output" />
+                    </div>
+                </div>
+                <br />
+
+
+                <p>
+                    Congratulations! You're now done with the PyCharm setup process.
+                </p>
+
+                <hr />
+
+                <h2>
+                    Frequently Asked Questions
+                </h2>
+
+                <h3>
+                    Can I use another version of Python?
+                </h3>
+                <p>
+                    Our strong recommendation is to use Python 3.8, which can be installed 
+                    in parallel with other versions of Python. This is the only version of Python
+                    we'll be supporting in this class. You must use at least Python 3.6.
+                </p>
+
+                <h3>
+                    Can I use an editor that isn't PyCharm?
+                </h3>
+                <p>
+                    If there's another environment that you're more comfortable with, you may use it,
+                    but the course staff will only provide support for issues in PyCharm. You must not 
+                    modify any configuration files provided in assignment starter code. 
+                </p>
+
+                <h3 data-toc-text="Can't open file">
+                    When I try to run my code, I'm getting an error saying <code>can't open file intro.py: No such file or directory</code>! What does this mean?
+                </h3>
+                <p>
+                    This most often happens when you open the incorrect file or folder in PyCharm. In this case, make sure to 
+                    open the <code>pycharm_intro</code> folder that <i>directly</i> contains <code>intro.py</code>, rather than 
+                    <code>intro.py</code> itself or a folder containing <code>pycharm_intro</code>. On Windows computer, you may 
+                    have a folder called <code>pycharm_intro</code> with another folder inside it called <code>pycharm_intro</code>. 
+                    Make sure to open the inner folder.
+                </p>
+                <p>
+                    To correct this error, open the 'File' menu and click 'Open'. Then, navigate to the correct 
+                    <code>pycharm_intro</code> folder and open it. 
+                </p>
+                <p>
+                    To verify that you are in the correct folder,
+                    type <span class="maconly"><code>ls</code> (that's a lowercase 'L')</span>
+                    <span class="winonly"><code>dir</code></span> into your terminal (the same place
+                    you type <code><span class="launcher">python3</span> intro.py &lt; YOUR NAME HERE &gt; </code>).
+                    This will show you a list of all the files in that folder, and <code>intro.py</code> should 
+                    be in this list.
+                </p>
+
+                <h3 data-toc-text="No Python Interpeter Configured">
+                    I'm getting a 'No Python Interpreter configured for the project' message when I open a file! What should I do?
+                </h3>
+                <p>
+                   This is likely caused by an issue with how you set up the interpreter. 
+                   To fix this, click 'Configure Python Interpreter', and set up the interpreter 
+                   by following <a href="#setinterpreter">these steps</a> until the 'Testing Pycharm' 
+                   section.
+                </p>
+
+                <h3 data-toc-text="The default interactive shell is now zsh">
+                    I'm on a Mac and I'm getting a message saying <code>The default interactive shell is now zsh.
+                    To update your account to use zsh, please run `chsh -s /bin/zsh</code>. What should I do?
+                </h3>
+                <p>
+                    That's just an innocuous message, don't worry about it!
+                </p>
+
+                <h3 data-toc-text="PyCharm won't open on a Mac">
+                    I'm on a Mac and PyCharm won't open! What should I do?
+                </h3>
+                <p>
+                    You might be using a slightly older version of MacOS. Try installing 
+                    <a href="https://download.jetbrains.com/python/pycharm-community-2018.3.7.dmg?_ga=2.154013245.444478522.1586284244-1193515711.1586109339">this version</a> 
+                    of PyCharm instead.
+                </p>
+                
+                <h3 data-toc-text="JetBrains Runtime 11 & Windows 32-bit">
+                    I'm getting an error window saying "This installation contains JetBrains Runtime 11
+                    which does not support Microsoft Windows 32-bit version"! What should I do?
+                </h3>
+                <p>
+                    <p>
+                        Try installing
+                        <a
+                            href="https://download.jetbrains.com/python/pycharm-community-2018.3.7.exe?_ga=2.144731825.444478522.1586284244-1193515711.1586109339">this
+                            version</a>
+                        of PyCharm instead.
+                    </p>
+                </p>
+
+                <p>
+                    <i>
+                        Course FAQs will be updated as we receive questions.
+                    </i>
+                </p>
+
+               
+            </div>
+            <div class="myTocContainer" style="position:absolute">
+                <div class="position-fixed  justify-content-center d-flex flex-column" style="height:100vh; width:185px;right:0px;top:0px;margin-top:-20px;
+				">
+
+                    <nav id="toc" data-toggle="toc" class="myToc"></nav>
+                </div>
+            </div>
+        </div>
+
+
+
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+
+			<div class="footer">
+				<p class="pull-left">
+					&#169; Stanford 2020 &#124; CS106A has been developed over decades by many talented teachers. Website designed by 
+					<a href="http://stanford.edu/~cpiech">Chris Piech</a>.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-74362126-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+
+    </div>
+
+    <script>
+        function setWindows() {
+            toggle("maconly", "none");
+            toggle("winonly", "inline-block");
+            const images = document.getElementsByTagName('img');
+            for (let i = 0; i < images.length; i++) {
+                images[i].src = images[i].src.replace("macos/", "win/")
+            }
+            
+            const launchers = document.getElementsByClassName("launcher");
+            for (let i = 0; i < launchers.length; i++) {
+                launchers[i].innerHTML = 'py';
+            }
+
+            const osSpiel = document.getElementById('osspiel');
+            osSpiel.innerHTML = "We've detected you're using a Windows Computer. &nbsp; &nbsp; <a href='#' onclick='setMacOS()'> I'm using a Mac </a>."
+
+            const modifier = document.getElementById('modifier');
+            modifier.innerHTML = "Alt";  
+        }
+
+        function setMacOS() {
+            toggle("maconly", "inline-block");
+            toggle("winonly", "none");
+            const images = document.getElementsByTagName('img');
+            for (let i = 0; i < images.length; i++) {
+                images[i].src = images[i].src.replace("win/", "macos/")
+            }
+
+            const launchers = document.getElementsByClassName("launcher");
+            for (let i = 0; i < launchers.length; i++) {
+                launchers[i].innerHTML = 'python3';
+            }
+
+            const osSpiel = document.getElementById('osspiel');
+            osSpiel.innerHTML = "We've detected you're using a Mac. &nbsp; &nbsp; <a href='#' onclick='setWindows()'> I'm using a Windows Machine </a>.";  
+
+            const modifier = document.getElementById('modifier');
+            modifier.innerHTML = "Command";       
+        }
+
+        function setUnknownOS() {
+           const osSpiel = document.getElementById('osspiel'); 
+           osSpiel.innerHTML = `
+            We weren't able to detect what operating system you're using. Click 
+            <a href="#" onclick="setMacOS()"> here </a> if you're using a Mac and 
+            <a href="#" onclick="setWindows()"> here </a> if you're using a Windows Machine.
+           `
+        }
+
+        function getOS() {
+            if (navigator.appVersion.indexOf("Win") != -1) return "Windows"
+            if (navigator.appVersion.indexOf("Mac") != -1) return "MacOS";
+            return "Unknown";
+        }
+
+        function setOS() {
+            const os = getOS();
+            if (os === "MacOS") setMacOS();
+            else if (os === "Windows") setWindows();
+            else setUnkownOS();
+        }
+
+        function toggle(className, displayState) {
+            var elements = document.getElementsByClassName(className)
+
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].style.display = displayState;
+            }
+        }
+
+
+        window.onload = setOS;
+
+    </script>
+
+</body>
