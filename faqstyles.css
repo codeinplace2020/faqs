@@ -32,3 +32,9 @@ h3 {
     font-size: 1.6rem;
 }
 
+
+@media (min-width: 1070px) {
+  .container-course {
+    max-width: 1040px !important;
+  }
+}
