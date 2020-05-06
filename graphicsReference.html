@@ -1,0 +1,405 @@
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Graphics Reference</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/default.min.css">
+    <link rel="stylesheet" href="faqstyles.css" />
+</head>
+
+<body >
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div style="height: 20px;"></div>
+        <h1><code>tkinter</code> Graphics Reference</h1>
+        <p class="subtleHeading">
+          April 29th, 2020
+        </p>
+        <hr />
+
+        <h2>Using Tk</h2>
+        <p>
+          One of the most common libraries to create graphics in Python is
+          called Tk. To use the Tk library in a program you must import it at
+          the top of your program (as shown below). The actual library name is
+          named <code>tkinter</code>.
+        </p>
+        <pre class="lang-python">
+            <code>
+import tkinter
+            </code>
+        </pre>
+
+        <h2>
+          The Canvas
+        </h2>
+
+        <p>
+          The drawing model in Tk is that you have a canvas (much like a
+          painting) where you are going to draw various shapes. The canvas is
+          simply a grid of pixels that have <code>x</code>,
+          <code>y</code> values. The coordinate (0, 0) is in the
+          <u>upper left-hand corner</u> of the canvas. The values of
+          <code>x</code> increase as you move to the right. The values of
+          <code>y</code> increase as you move down. So, you can think of the
+          canvas as follows:
+        </p>
+        <img
+          src="img/graphics/canvas.png"
+          class="img-fluid mx-auto d-block"
+          style="width: 30%;"
+          alt="A diagram of the canvas coordinate scheme. (0, 0) is the top left corner. An arrow extends downwards in the y direction and rightwards in the x direction"
+        />
+        <br />
+        <p>
+          When we want to draw shapes on a canvas, we call functions on that
+          canvas that “create” the shape we want to draw. These shapes then
+          appear on the canvas. In CS106A, we will generally provide the code
+          that creates the canvas for you, so all you need to worry about is
+          adding shapes to that canvas. For the remainder of this handout, we
+          will assume that an object named <code>canvas</code> has already been
+          created, and it represents the Tk canvas that you’ll be drawing on.
+          Below we provide a brief tour of some of the different shapes you can
+          draw in a canvas as well as highlight a few of the options you have
+          with regard to how those shapes look.
+        </p>
+
+        <h2>Drawing lines</h2>
+        <p>
+          To draw lines on a canvas, the function we call is named
+          <code>create_line</code>, and we would use it as shown below:
+        </p>
+        <pre class="lang-python">
+            <code>
+canvas.create_line(x1, y1, x2, y2)
+            </code>
+        </pre>
+        <p>
+          The parameters (<code>x1</code>, <code>y1</code>) set the starting
+          point of the line and (<code>x2</code>, <code>y2</code>) set the
+          ending point of the line.
+        </p>
+        <p>
+          For example, the following command would draw a line from location
+          (10, 20) to (100, 50) on the canvas:
+        </p>
+        <pre class="lang-python">
+            <code>
+canvas.create_line(10, 20, 100, 50)
+            </code>
+        </pre>
+        <p>
+          We can also create colored lines, by including the named parameter
+          <code>fill=</code>
+          as shown below (here the line drawn will be green). Note that the name
+          of the color is specified as a string (i.e., it should be inside
+          single/double quotes).
+        </p>
+        <pre class="lang-python">
+          <code>
+canvas.create_line(x1, y1, x2, y2, fill='green')
+          </code>
+      </pre>
+        <p>
+          By default (if the <code>fill=</code>parameter is not included), lines
+          will be black. Here is just a sample of some of the common colors you
+          can set in Tk:
+        </p>
+        <div class="row">
+          <div class="col-sm text-center">
+            <code>red</code><br />
+            <code>blue</code><br />
+            <code>green</code><br />
+            <code>yellow</code><br />
+            <code>white</code><br />
+            <code>black</code><br />
+            <code>purple</code>
+          </div>
+          <div class="col-sm">
+            <code>brown</code><br />
+            <code>orange</code><br />
+            <code>gray</code><br />
+            <code>pink</code><br />
+            <code>tan</code><br />
+            <code>chartreuse</code><br />
+          </div>
+        </div>
+        <p>
+          If you’re interested, you can find a ridiculously long list of colors
+          in the
+          <a
+            href="https://www.tcl.tk/man/tcl8.6/TkCmd/colors.htm"
+            target="_blank"
+            >Tk documentation</a
+          >.
+        </p>
+        <p>
+          Here is an example of some line drawing code and the resulting image
+          that is produced:
+        </p>
+        <pre class="lang-python">
+            <code>
+def draw(canvas):
+    canvas.create_line(10, 20, 100, 50) 
+    canvas.create_line(0, 0, 200, 200, fill='red') 
+    canvas.create_line(200, 10, 150, 100, fill='green') 
+    canvas.create_line(150, 100, 250, 100, fill='green') 
+    canvas.create_line(250, 100, 200, 10, fill='green')
+            </code>
+        </pre>
+        <img
+          src="img/graphics/linedrawingwithcolors.png"
+          class="img-fluid mx-auto d-block"
+          alt="A canvas with 5 lines on it. The red and black line intersect near the top left corner and the other three form a green triangle in the top right"
+          style="width: 30%;"
+        />
+        <br /><br />
+        <h2>Drawing Rectangles</h2>
+
+        <p>
+          You can also draw rectangles using the
+          <code>create_recangle</code> function. The parameters for drawing a
+          rectangle use the notion of a “bounding box.” The idea of a bounding
+          box is that you specify the coordinates of the upper left-hand corner
+          and lower right-hand corner of the rectangle you want to draw, which
+          then define the boundaries of the “box” that specifies the rectangle.
+          The create_rectangle function is shown below.
+        </p>
+        <pre class="lang-python">
+            <code>
+canvas.create_rectangle(up_left_x, up_left_y, low_right_x, low_right_y)
+            </code>
+        </pre>
+        <p>
+          The parameters (<code>up_left_x</code>, <code>up_left_y</code>)
+          specify the (x, y) location of the upper left- hand corner of the
+          rectangle. The parameters (<code>low_right_x</code>,
+          <code>low_right_y</code>) specify the (x, y) location of the lower
+          right-hand corner of the rectangle.
+        </p>
+        <p>
+          For example, the following command would draw a rectangle with upper
+          left-hand corner at (5, 50) and lower right-hand corner at (100, 200)
+          on the canvas:
+        </p>
+        <pre class="lang-python">
+            <code>
+canvas.create_rectangle(5, 50, 100, 200)
+            </code>
+        </pre>
+        <p>
+          That would appear as:
+        </p>
+        <img
+          src="img/graphics/firstrect.png"
+          class="img-fluid mx-auto d-block"
+          alt="A canvas with a black rectangle on it"
+          style="width: 30%;"
+        />
+        <br />
+        <p>
+          By default, rectangles are black outlines (the rectangle is not filled
+          in). As with lines, we can create colored rectangles. Here we can set
+          the color of the outline of the rectangle using the named parameter
+          outline= and we can also specify a color to fill in the rectangle
+          using the named parameter <code>fill=</code>. Note that the outline
+          and fill are separate, so if you want a rectangle that is a solid both
+          on its outline and filled in interior, you need to specify both
+          parameters. By default (if the <code>outline=</code> and/or
+          <code>fill=</code>
+          parameter are not included), the color will be black.
+        </p>
+        <p>
+          Examples of using these parameters are shown in the example below:
+        </p>
+        <pre class="lang-python">
+            <code>
+canvas.create_rectangle(10, 10, 50, 50, outline='blue') 
+canvas.create_rectangle(10, 60, 50, 100, fill='red')
+canvas.create_rectangle(10, 110, 50, 150, fill='black', outline='orange') 
+canvas.create_rectangle(10, 160, 50, 200, fill='green', outline='green')
+            </code>
+        </pre>
+        <p>
+          Immediately below we show the resulting image that is produced (the
+          rectangles shown in the picture below are in descending order,
+          corresponding to the order of the commands that created them). It
+          might be difficult to see, but the second rectangle has a black
+          outline around it (since the <code>outline=</code> parameter was not
+          set in the second rectangle, so the default outline color is black).
+          The third rectangle, which is filled in with black, actually has an
+          orange outline around it. The fourth rectangle is all green since both
+          its fill and outline are set to green.
+        </p>
+        <img
+          src="img/graphics/fourrectangles.png"
+          class="img-fluid mx-auto d-block"
+          alt="A blue, empty rectangle above a red rectangle with a black outline above a black rectangle with an orange outline above a green rectangle with a green outline"
+          style="width: 30%;"
+        />
+        <br /><br />
+        <h2>
+          Drawing Ovals
+        </h2>
+        <p>
+          You can also draw ovals using the <code>create_oval</code> function.
+          The parameters for drawing an oval are similar to those for a
+          rectangle and use the notion of a “bounding box.” Here, the bounding
+          box for the oval is that you specify the coordinates of the
+          <u>upper left-hand corner</u> and <u>lower right-hand corner</u> of an
+          imaginary rectangle that specifies the size of the oval to draw.
+          Basically, the oval drawn will have its top, bottom, right, and left
+          just touching the sides of the bounding box you specify.
+        </p>
+        <p>The <code>create_oval</code> function is shown below.</p>
+        <pre class="lang-python">
+            <code>
+canvas.create_oval(up_left_x, up_left_y, low_right_x, low_right_y)
+            </code>
+        </pre>
+        <br />
+        <p>
+          The parameters (<code>up_left_x</code>, <code>up_left_y</code>)
+          specify the (x, y) location of the upper left- hand corner of the
+          bounding box for the oval. The parameters (<code>low_right_x</code>,
+          <code>low_right_y</code>) specify the (x, y) location of the lower
+          right-hand corner of the bounding box for the oval.
+        </p>
+        <p>
+          For example, the following command would draw an oval with upper
+          left-hand corner at (5, 50) and lower right-hand corner at (100, 200)
+          on the canvas:
+        </p>
+        <pre class="lang-python">
+            <code>
+canvas.create_oval(5, 50, 100, 200)
+            </code>
+        </pre>
+        <br />
+        <p>
+          That would appear as:
+        </p>
+        <img
+          src="img/graphics/fourrectangles.png"
+          class="img-fluid mx-auto d-block"
+          alt="A black, empty oval on the left side of the canvas"
+          style="width: 30%;"
+        />
+        <p>
+          As with rectangles, by default, ovals are black outlines (not filled
+          in). But you can create colored ovals by using the named parameters
+          <code>outline=</code> and <code>fill=</code>which work the same for
+          ovals as they do for rectangles. To make clear the notion of a
+          bounding box, below we draw a green filled oval drawn on top of an
+          outline rectangle, where both the oval and rectangle have the same
+          bounding box coordinates.
+        </p>
+        <pre class="lang-python">
+            <code>
+canvas.create_rectangle(10, 50, 260, 200)
+canvas.create_oval(10, 50, 260, 200, outline='green', fill='green')
+            </code>
+        </pre>
+        <br />
+        <img
+          src="img/graphics/boundingbox.png"
+          class="img-fluid mx-auto d-block"
+          alt="A green oval bounded by a black rectangle"
+          style="width: 30%;"
+        />
+        <h2>Drawing Text</h2>
+        <p>
+          You can draw text using the create_text function. The parameters for
+          drawing text include the (<code>x</code>, <code>y</code>) location on
+          the canvas where the text should appear, the “anchoring” location (we
+          will just use <code>'w'</code>for West, which means the
+          (<code>x</code>, <code>y</code>) location of the text specifies the
+          starting point (left-hand or west side) of the text), the font for the
+          text, and the text to be drawn. An example of the
+          <code>create_text</code> function is shown below.
+        </p>
+        <pre class="lang-python">
+            <code>
+canvas.create_text(x, y, anchor='w', font='Times', text='hi there')
+            </code>
+        </pre>
+        <br />
+        <p>
+          For example, the following command would draw the text "hi there" in
+          Times font starting at location (10, 5):
+        </p>
+        <pre class="lang-python">
+            <code>
+canvas.create_text(10, 50, anchor='w', font='Times', text='hi there')
+            </code>
+        </pre>
+        <br />
+        <p>
+          That would appear as:
+        </p>
+        <img
+          src="img/graphics/create_text.png"
+          class="img-fluid mx-auto d-block"
+          alt="The text 'hi there' on the canvas"
+          style="width: 30%;"
+        />
+        <br /><br />
+        <h2>
+          Ordering of drawings
+        </h2>
+        <p>
+          Objects are drawn on the canvas in the order in which they are created
+          by your code. So, if you draw an object after another some other
+          object in your code, the second object drawn can potentially cover
+          (occlude) part of the object that was drawn first. This is sometimes
+          referred to as the <i>z-order</i> of the objects.
+        </p>
+        <p>
+          As an example, below, we first draw a yellow rectangle, then draw an
+          orange oval (which partly overlaps the rectangle), and then some text
+          (that is on top of both the rectangle and the oval).
+        </p>
+        <pre class="lang-python">
+            <code>
+canvas.create_rectangle(10, 50, 150, 200, fill='yellow', outline='yellow') 
+canvas.create_oval(100, 100, 200, 220, fill='orange', outline='orange') 
+canvas.create_text(70, 170, anchor='w', font='Times', text='good times!')
+            </code>
+        </pre>
+        <br />
+        <p>
+          That would appear as:
+        </p>
+        <img
+          src="img/graphics/z-order.png"
+          class="img-fluid mx-auto d-block"
+          alt="An orange oval overlapping on top of a yellow rectangle with the text 'good times!' above it"
+          style="width: 30%;"
+        />
+        <br />
+        <p>
+          That gives you enough of the basics of drawing with Tk, so you can
+          make some pretty beautiful drawings. Enjoy!
+        </p>
+      </div>
+      <div class="myTocContainer" style="position: absolute;">
+        <div
+          class="position-fixed justify-content-center d-flex flex-column"
+          style="
+            height: 100vh;
+            width: 185px;
+            right: 0px;
+            top: 0px;
+            margin-top: -20px;
+          "
+        >
+          <nav id="toc" data-toggle="toc" class="myToc"></nav>
+        </div>
+      </div>
+    </div>
+
