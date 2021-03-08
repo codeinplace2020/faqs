@@ -14,7 +14,7 @@ We don’t promise a certificate of completion. This class is purely for the joy
 
 **How can I make the most of this course?**
 
-ave fun with it. Do the readings. Come to section. Download PyCharm and do the assignments. Learn from your community on Ed.
+Have fun with it. Do the readings. Come to section. Download PyCharm and do the assignments. Learn from your community on Ed.
 
 **I have a suggestion for improving the course. How can I tell you?**
 
