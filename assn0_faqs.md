@@ -1,5 +1,3 @@
-# Assignment #0 FAQs
-
 _Is your code not working? That is very normal, especially when you are first starting. Keep at it! You can work through any of the challenges you face on this "assignment"._
 
 ## General
