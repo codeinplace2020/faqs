@@ -4,11 +4,11 @@ _Is your code not working? That is very normal, especially when you are first st
 
 Have questions related to assignment 0 in general? Look for them here!
 
-### "Learn Karel Basics" is not marked as complete
+#### "Learn Karel Basics" is not marked as complete
 
 The step that consists of reading Chapters 1-5 doesn't get marked as complete with a green tick like the other steps. Feel free to read at your own pace and move on from this step when you finish the chapters.
 
-### I can't access my account anymore, or it's blank!
+#### I can't access my account anymore, or it's blank!
 
 1. Navigate to the [Code In Place homepage](https://codeinplace.stanford.edu), reopen the application form, and try to sign in again.
 2. Are you using a phone? Try logging in from a computer instead?
@@ -16,7 +16,7 @@ The step that consists of reading Chapters 1-5 doesn't get marked as complete wi
 4. Try both the "Sign in with email" and the "Sign in with Google" buttons. Depending on whether you originally selected "Sign in with email" or "Sign in with Google", there are some cases where trying to login with the opposite method will cause problems.
 5. If all else fails: send us an email with screenshots/details about your problem. We'll do everything we can to make sure you don't lose any progress.
 
-### Have you received my application?
+#### Have you received my application?
 
 Sign into your student application and look for the green status bar at the top of the application. If it says "Application complete! You finished...", then we have successfully received your application! If your application isn't complete, that status bar will show what your next steps are.
 
@@ -24,7 +24,7 @@ Sign into your student application and look for the green status bar at the top 
 
 Reading error messages for typos is a skill that is worth learning but takes some practice. Here is a translation of some of the common ones and what they could mean.
 
-### `Expected a body definition`
+#### `Expected a body definition`
 
 All functions (like `main`) need to have a body, which is the indented code. See Chapter 3 of the Karel Reader. For example, in this `turn_right` fucntion definition, the `turn_left` commands are all in the body:
 
@@ -35,15 +35,15 @@ def turn_right():
     turn_left()
 ```
 
-### `Function body must be indented...`
+#### `Function body must be indented...`
 
 All functions (like `main`) need to have a body, which is the indented code. See Chapter 3 of the Karel Reader. If you don't have any code in the function body, that can lead to this error.
 
-### `Found a newline when expecting ":"`
+#### `Found a newline when expecting ":"`
 
 If you are defining a new function, or a for loop, you need to end that line of code with a `:` (a colon).
 
-### `Found "<something>" when expecting "("`
+#### `Found "<something>" when expecting "("`
 
 There are several issues that can cause this message.
 
@@ -57,13 +57,13 @@ def main():
         turn_left()
 ```
 
-### `Found move when expecting def`
+#### `Found move when expecting def`
 
 In Karel, all commands must be declared inside a function! Do you have a `main` function?
 
 ## Shelter-in-place
 
-### It's not being marked as complete.
+#### It's not being marked as complete.
 
 Whenever a Karel program isn't being marked as complete when you think it should be, immediately see if any error messages are popping up below the Karel window. If this is the case, check out the "Understanding Typos" section.
 
@@ -71,7 +71,7 @@ If it isn't an error message, reread the exercise requirements. A common mistake
 
 ## Piles
 
-### My `for` loop won't stop
+#### My `for` loop won't stop
 
 The number after `range(` is the number of times the indented code underneath the `for` loop runs. In this example, any code you write in the code block where we've written `# Code that repeats`. repeats 11 times. If you would like the `for` loop to end earlier, you can use a smaller number. While there are other ways to stop a loop, this is the best strategy to do so for this problem. Check out Chapter 5 for more information!
 
